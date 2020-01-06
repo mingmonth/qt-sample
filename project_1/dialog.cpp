@@ -12,3 +12,18 @@ Dialog::~Dialog()
 {
     delete ui;
 }
+
+void Dialog::on_pushButton_clicked()
+{
+    ui->lineEdit->setText("Hello World");
+}
+
+void Dialog::on_pushButton_3_clicked()
+{
+    ui->lineEdit->setText("");
+}
+
+void Dialog::on_pushButton_2_clicked()
+{
+    this->close();
+}
