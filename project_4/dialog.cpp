@@ -9,6 +9,16 @@ Dialog::Dialog(QWidget *parent) :
     int ban = 10;
     qDebug() << "Circle width = " << ban * ban * pi;
     qDebug() << "Circle length = " << ban * 2 * pi;
+
+    int data1;
+    int data2;
+
+    data1 = 10;
+    data2 = 3;
+
+    qDebug() << QString("(data1 < 11) && (data2 > 2) = %1").arg((data1 < 11) && (data2 > 2));
+    qDebug() << QString("(data1 < 11) || (data2 < 2) = %1").arg((data1 < 11) || (data2) < 2);
+    qDebug() << QString("!(data1 < 11) = %1").arg(!(data1 < 11));
 }
 
 Dialog::~Dialog()
