@@ -6,6 +6,14 @@ Dialog::Dialog(QWidget *parent) :
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
+    dataint = 32767;
+    qDebug() << dataint;
+    datadou = 32.767;
+    qDebug() << datadou;
+    databoo = true;
+    qDebug() << databoo;
+    datastr = "OK!";
+    qDebug() << datastr;
 }
 
 Dialog::~Dialog()
