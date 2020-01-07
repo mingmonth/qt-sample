@@ -6,6 +6,7 @@ Dialog::Dialog(QWidget *parent) :
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
+    //QDialog Dialog(0, Qt::FramelessWindowHint | Qt::Dialog);
     db = QSqlDatabase::addDatabase("QSQLITE", "CONNECTION NAME");
     db.setDatabaseName("../../test.db");
     if(!db.open()) {
