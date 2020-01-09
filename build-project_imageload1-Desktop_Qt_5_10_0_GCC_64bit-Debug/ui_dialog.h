@@ -16,23 +16,31 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Dialog
 {
 public:
+    QVBoxLayout *verticalLayout;
     QGraphicsView *graphicsView;
 
     void setupUi(QDialog *Dialog)
     {
         if (Dialog->objectName().isEmpty())
             Dialog->setObjectName(QStringLiteral("Dialog"));
-        Dialog->resize(400, 300);
+        Dialog->resize(800, 480);
+        verticalLayout = new QVBoxLayout(Dialog);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         graphicsView = new QGraphicsView(Dialog);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
-        graphicsView->setGeometry(QRect(70, 40, 256, 192));
         graphicsView->setAutoFillBackground(false);
+
+        verticalLayout->addWidget(graphicsView);
+
 
         retranslateUi(Dialog);
 
